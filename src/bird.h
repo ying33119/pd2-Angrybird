@@ -6,9 +6,9 @@
 #include <QGraphicsScene>
 #include <QTimer>
 
-#define BIRD_DENSITY 10.0f*2
-#define BIRD_FRICTION 0.2f
-#define BIRD_RESTITUTION 0.5f/2.0
+#define BIRD_DENSITY 20.0f
+#define BIRD_FRICTION 0.4f
+#define BIRD_RESTITUTION 0.5f/3.0
 
 class Bird : public GameItem
 {
@@ -49,10 +49,10 @@ class birdB: public Bird{
 public:
     birdB(float x, float y, float radius, QTimer *timer, QPixmap pixmap, b2World *world, QGraphicsScene *scene):
         Bird(x,y,radius,timer,pixmap,world,scene){
-        radius = radius;
+        Radius = radius;
     }
     virtual void effect();
 private:
-    float radius;
+    float Radius;
 };
 #endif // BIRD_H

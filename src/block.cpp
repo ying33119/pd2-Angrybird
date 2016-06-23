@@ -19,9 +19,9 @@ block::block(float x, float y, float radius, QTimer *timer, QPixmap pixmap, b2Wo
 
     b2FixtureDef fixturedef;
     fixturedef.shape = &bodyshape;
-    fixturedef.density = BIRD_DENSITY;
-    fixturedef.friction = BIRD_FRICTION;
-    fixturedef.restitution = BIRD_RESTITUTION;
+    fixturedef.density = BLOCK_DENSITY;
+    fixturedef.friction = BLOCK_FRICTION;
+    fixturedef.restitution = BLOCK_RESTITUTION;
     g_body->SetAngularDamping(3);
     g_body->CreateFixture(&fixturedef);
 

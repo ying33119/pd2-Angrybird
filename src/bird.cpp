@@ -50,12 +50,12 @@ void birdX::effect(){
     setLinearVelocity(b2Vec2(0,this->getVelY()-30));
 }
 void birdY::effect(){
-    setLinearVelocity(b2Vec2(this->getVelX()*5,this->getVelY()*5));
+    setLinearVelocity(b2Vec2(this->getVelX()*5,this->getVelY()*8));
 }
 void birdB::effect(){
     g_pixmap.setPixmap(QPixmap(":/image/birdB.png").scaled(200,200));
     g_pixmap.setTransformOriginPoint(g_pixmap.boundingRect().width()/2,g_pixmap.boundingRect().height()/2);
-    g_size = QSize(radius*100,radius*100);
+    g_size = QSize(Radius*11,Radius*11);
     g_body->SetLinearVelocity(b2Vec2(g_body->GetLinearVelocity().x*2,g_body->GetLinearVelocity().y*2));
 }
 

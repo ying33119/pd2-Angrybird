@@ -30,7 +30,7 @@ public:
     void showEvent(QShowEvent *);
     bool eventFilter(QObject *,QEvent *event);
     void keyPressEvent(QKeyEvent* event);
-    void closeEvent(QCloseEvent *);
+    //void closeEvent(QCloseEvent *);
     void start();
 
 signals:
@@ -44,6 +44,7 @@ private slots:
     void createbird();
     // For debug slot
     void QUITSLOT();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
@@ -51,11 +52,12 @@ private:
     QList<GameItem *> itemList;
     QList<GameItem *> birdList;
     QTimer timer;
+    button *startButton, *exitButton;
     Bird *bird;
     bool waited = false;
     bool move = false;
-
     int birdnum=0;
+
 };
 
 #endif // MAINWINDOW_H

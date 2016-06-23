@@ -6,9 +6,9 @@
 #include <QGraphicsScene>
 #include <QTimer>
 
-#define BIRD_DENSITY 10.0f
-#define BIRD_FRICTION 0.2f
-#define BIRD_RESTITUTION 0.5f
+#define BLOCK_DENSITY 10.0f
+#define BLOCK_FRICTION 0.2f
+#define BLOCK_RESTITUTION 0.5f
 
 class block : public GameItem
 {
